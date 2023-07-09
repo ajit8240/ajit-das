@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+        .template{
+            width: 100%;
+            /* background-color: red; */
+        }
+
+        .header{
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(p0.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav{
+            background-color: rgb(255, 174, 0);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 30px;
+            align-items: center;
+
+        }
+
+        .nav ul li{
+            display: inline-block;
+            margin: 0 5px;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+
+        .logo{
+            font-size: 35px;
+
+        }
+
+        .header .text{
+            /* width: 800px; */
+            max-width: 800px;
+            /* background-color: red; */
+            text-align: center;
+            margin:15rem auto;
+            color: white;
+        }
+
+
+        .header p{
+            max-width: 600px;
+            text-align: center;
+            margin: 10px auto;
+
+        }
+
+        .header h1{
+            font-size: 50px;
+            text-transform: capitalize;
+        }
+
+        .header button{
+            padding: 10px 35px;
+            margin: 20px 0;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white;
+            background-color: transparent;
+        }
+
+        .courses{
+            padding: 2rem 1rem;
+        }
+
+        .courses-section{
+            /* background-color: red; */
+            width: 1500px;
+            max-width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .courses-section section{
+            background-color: rgba(248, 193, 193, 0.521);
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width:768px){
+            .courses-section section{
+            width: 500px;
+
+            }
+            
+        }
+
+        .courses-heading{
+            width: 500px;
+            max-width: 100%;
+            /* background-color: green; */
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .campus{
+            padding: 2rem 1rem;
+            /* background-color: green; */
+        }
+
+        .campus-image{
+            /* background-color: red; */
+            max-width:1500px;
+            /* NOTE: first max-width and then width 100% for perfect responsiveness */
+            width:  100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .campus-image img{
+            max-width: 350px;
+            width: 100%;
+            /* height: 400px; */
+        }
+
+        .campus-image img:hover{
+            transform: translateY(-15px);
+            transition:0.5s ease ;
+
+        }
+
+        .campus-heading{
+            width: 500px;
+            max-width: 100%;
+            /* background-color: yellow; */
+            margin: auto;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+
+        /* -------------------------------- */
+        .fct{
+            padding: 2rem 1rem;
+            /* background-color: green; */
+        }
+
+        .fct-image section{
+            max-width: 400px;
+            margin: auto;
+            background-color: red;
+            padding: 5px;
+            transition: .5s ease;
+
+        }
+
+        .fct-image img{
+            width: 100%;
+            height: 400px;
+
+        }
+
+        .fct-image section:hover{
+            transform: translateY(-15px);
+        }
+
+        .fct-image {
+            width: 1500px;
+            max-width: 100%;
+            /* background-color: red; */
+            padding: 1rem;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .fct-heading{
+            width: 500px;
+            max-width: 100%;
+            /* background-color: yellow; */
+            margin: auto;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+
+        .feedback{
+            /* background-color: red; */
+            padding: 1rem;
+        }
+
+
+        .fd-section{
+            width: 1500px;
+            max-width: 100%;
+            /* background-color: green; */
+            padding: 2rem 1rem;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .fd-section section{
+            width: 400px;
+            padding: 10px 5px;
+              background-color: rgba(248, 193, 193, 0.521);
+        }
+
+       
+
+        .fd-section img{
+            width: 40px;
+            max-width: 100%;
+            height: 40px;
+            border-radius: 50%;
+            float: left;
+            
+        }
+
+        .fd-section p{
+            /* background-color: yellow; */
+            padding-left:50px ;
+        }
+
+        .fd-heading{
+            width: 500px;
+            max-width: 100%;
+            /* background-color: green; */
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        .enroll{
+            padding: 3rem 0;
+        }
+
+        .en-text{
+            width: 820px;
+            max-width: 100%;
+            height: 400px;
+            margin: auto;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(p1.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 9rem 0;
+            margin: auto;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            text-transform: capitalize;
+        }
+
+        .en-text h4{
+            margin: 1rem;
+
+        }
+
+        .footer{
+            background-color: rgb(0, 0, 0);
+            padding: 1rem 1rem;
+        }
+
+        .footer-box{
+            /* background-color: green; */
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem 0;
+            text-align: center;
+            color: rgb(104, 104, 104);
+        }
+
+        .footer-box h3{
+            margin-bottom: 1rem;
+            font-size: 23px;
+            color: white;
+        }
+
+        .icon{
+            width: 300px;
+            margin:1rem auto;
+            /* padding: 1rem 0; */
+        }
+
+        .icon img{
+            width: 20px;
+            margin: 2px;
+        }
+
+
+    </style>
+</head>
+<body>
+  
+    <div class="header template">
+        <div class="nav">
+            <h2 class="logo">Logo</h2>
+
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Collage</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h1>world biggest university</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, odit necessitatibus voluptatibus maxime rrupti debitis </p>
+            <button>visit to side</button>
+        </div>
+    </div>  <!----------------------------------------------header end -->
+
+    <div class="courses template">
+        <div class="courses-heading">
+            <h1>courses we offer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="courses-section">
+            <section>
+                <h3>THIS IS HEADING</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quibusdam sit doloribus nihil temporibus praesentium rerum ratione tempora voluptate impedit sint voluptatem voluptas dolore deserunt ipsum laborum, quaerat itaque possimus.</p>
+            </section>
+
+            <section>
+                <h3>THIS IS HEADING</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quibusdam sit doloribus nihil temporibus praesentium rerum ratione tempora voluptate impedit sint voluptatem voluptas dolore deserunt ipsum laborum, quaerat itaque possimus.</p>
+            </section>
+
+            <section>
+                <h3>THIS IS HEADING</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quibusdam sit doloribus nihil temporibus praesentium rerum ratione tempora voluptate impedit sint voluptatem voluptas dolore deserunt ipsum laborum, quaerat itaque possimus.</p>
+            </section>
+        </div>
+    </div><!----------------------------------------------courses end -->
+
+    <div class="template campus">
+        <div class="campus-heading">
+            <h2>our global campus</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="campus-image">
+
+            <img src="p5.jpg" alt="">
+            <img src="p2.jpg" alt="">
+            <img src="p6.jpg" alt="">
+
+
+        </div>
+    </div><!----------------------------------------------campus end -->
+
+
+    <div class="template fct">
+        <div class="fct-heading">
+            <h2>our facility</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="fct-image">
+
+            <section>
+                <img src="p8.jpeg" alt="">
+                <h3>Largest Playground</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae maiores fugiat dicta voluptatibus cum quisquam aliquam sapiente placeat minima facere libero eius, consequatur harum aspernatur autem iure nam? Veritatis.</p>
+
+            </section>
+            <section>
+            <img src="p4.jpg" alt="">
+            <h3>world class liabrary</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex dolore iure assumenda commodi non velit quidem unde hic neque necessitatibus maxime voluptates, mollitia culpa, maiores magnam corrupti ratione blanditiis.</p>
+
+
+            </section>
+            <section>
+            <img src="p7.jpg" alt="">
+            <h3>tasty and healthy food</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sint recusandae ut modi harum quod ea voluptatum assumenda molestiae a impedit voluptates ipsam, quisquam alias laudantium deleniti odio repellat cum.s</p>
+
+
+            </section>
+
+
+
+        </div>
+    </div><!----------------------------------------------campus end -->
+
+
+    <div class="feedback template">
+        <div class="fd-heading">
+            <h3>what our student says</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="fd-section">
+            <section>
+                <img src="p1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, obcaecati? Sapiente, dolorum ratione. Delectus pariatur numquam accusantium alias,
+                    <br>
+                    🧡🧡🧡🧡🧡
+                </p>
+               
+            </section>
+
+            <section>
+                <img src="p1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, obcaecati? Sapiente, dolorum ratione. Delectus pariatur numquam accusantium alias,
+                    <br>
+                    🧡🧡🧡🧡🧡
+                </p>
+            </section>
+           
+        </div>
+
+        <div class="enroll template">
+            <div class="en-text">
+                <h4>enroll for our varius courses</h4>
+                <h4>anywhrere from the world</h4>
+            </div>
+        </div>
+    </div> <!-----feedback end---------------------------------------------- -->
+
+
+    <div class="footer template">
+
+        <div class="footer-box">
+            <h3>About us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ex distinctio numquam temporibus quibusdam officia cum. Dolorem enim qui, voluptates, fugit nihil sapiente ad autem itaque ipsa eligendi iste dolore.</p>
+
+            <div class="icon">
+                <img src="facebook.png" alt="">
+                <img src="instagram.png" alt="">
+                <img src="twitter (1).png" alt="">
+                <img src="youtube.png" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
